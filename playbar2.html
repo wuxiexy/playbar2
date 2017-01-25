@@ -1,0 +1,117 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>change playBar</title>
+    <link rel="stylesheet" href="./playBarStyle.css">
+    <style type="text/css">
+        * {
+            margin: 0;
+            padding: 0;
+            -webkit-box-sizing: border-box;
+            -moz-box-sizing: border-box;
+            box-sizing: border-box;
+            text-decoration: none;
+        }
+        .demo {
+            margin: 100px;
+        }
+        .form-control {
+            margin-left: 100px;
+
+            display: block;
+            width: 100%;
+            height: 34px;
+            padding: 6px 12px;
+            font-size: 14px;
+            line-height: 1.42857143;
+            color: #555;
+            background-color: #fff;
+            background-image: none;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075);
+            box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075);
+            -webkit-transition: border-color ease-in-out .15s, -webkit-box-shadow ease-in-out .15s;
+            -o-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+            transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+        }
+        .form-control:focus {
+            border-color: #66afe9;
+            outline: 0;
+            -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(102, 175, 233, .6);
+            box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(102, 175, 233, .6);
+        }
+    </style>
+</head>
+<body>
+
+    <div id="playBar" class="demo"></div>
+
+    <select id="selProgressBar" class="form-control" onchange="$.playBar.selChange(this);" style="width: inherit;display: inline-block;">
+        <option value="30分钟" selected="selected">30分钟</option>
+        <option value="1小时">1小时</option>
+        <option value="1小时30分钟">1小时30分钟</option>
+        <option value="2小时">2小时</option>
+        <option value="2小时30分钟">2小时30分钟</option>
+        <option value="3小时">3小时</option>
+        <option value="3小时30分钟">3小时30分钟</option>
+        <option value="4小时">4小时</option>
+        <option value="4小时30分钟">4小时30分钟</option>
+        <option value="5小时">5小时</option>
+        <option value="5小时30分钟">5小时30分钟</option>
+        <option value="6小时">6小时</option>
+        <option value="6小时30分钟">6小时30分钟</option>
+        <option value="7小时">7小时</option>
+        <option value="7小时30分钟">7小时30分钟</option>
+        <option value="8小时">8小时</option>
+        <option value="8小时30分钟">8小时30分钟</option>
+        <option value="9小时">9小时</option>
+        <option value="9小时30分钟">9小时30分钟</option>
+        <option value="10小时">10小时</option>
+
+        <option value="10小时30分钟">10小时30分钟</option>
+        <option value="11小时">11小时</option>
+        <option value="11小时30分钟">11小时30分钟</option>
+        <option value="12小时">12小时</option>
+        <option value="12小时30分钟">12小时30分钟</option>
+        <option value="13小时">13小时</option>
+        <option value="13小时30分钟">13小时30分钟</option>
+        <option value="14小时">14小时</option>
+        <option value="14小时30分钟">14小时30分钟</option>
+        <option value="15小时">15小时</option>
+        <option value="15小时30分钟">15小时30分钟</option>
+        <option value="16小时">16小时</option>
+        <option value="16小时30分钟">16小时30分钟</option>
+        <option value="17小时">17小时</option>
+        <option value="17小时30分钟">17小时30分钟</option>
+        <option value="18小时">18小时</option>
+        <option value="18小时30分钟">18小时30分钟</option>
+        <option value="19小时">19小时</option>
+        <option value="19小时30分钟">19小时30分钟</option>
+        <option value="20小时">20小时</option>
+
+        <option value="20小时30分钟">20小时30分钟</option>
+        <option value="21小时">21小时</option>
+        <option value="21小时30分钟">21小时30分钟</option>
+        <option value="22小时">22小时</option>
+        <option value="22小时30分钟">22小时30分钟</option>
+        <option value="23小时">23小时</option>
+        <option value="23小时30分钟">23小时30分钟</option>
+        <option value="24小时">24小时</option>
+
+    </select>
+
+
+    <script type="text/javascript" src="jquery-3.1.1.js"></script>
+    <script type="text/javascript" src="./jquery-PlayBar.min.js"></script>
+    <script type="text/javascript">
+        $(function(){
+            $.playBar.addBar($('#playBar'));     //第一个参数是需要显示播放器的容器，第二个参数为时间，单位毫秒
+        });
+    </script>
+
+</body>
+</html>

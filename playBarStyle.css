@@ -1,0 +1,54 @@
+@charset "utf-8";
+.BarControl{
+    width:100%;
+    height:100%;
+    padding:0;
+    margin:0;
+    display:inline-block;
+}
+.BarBeginTime, .BarFinishTime{
+    width:40px;
+    height:20px;
+    color: #000;
+    font-size:8px;
+    line-height:20px;
+}
+.TheBar{
+    position:relative;
+    width: 564px;
+    margin-left:2px;
+    height:4px;
+    border-radius:2px;
+    -webkit-border-radius:2px;
+    -moz-border-radius:2px;
+    background:#EBE8E8;
+    overflow:visible;
+}
+.TheColorBar{
+    width:0px;
+    border-radius:0px;
+    -webkit-border-radius:0px;
+    -moz-border-radius:0px;
+    height:100%;
+    background:#3498DB;
+    float:left;
+}
+.TimeBall, .BarTimeBall{
+    width:10px;
+    height:10px;
+    border-radius:5px;
+    -moz-border-radius:5px;
+    -webkit-border-radius:5px;
+    background:#3498DB;
+    position:absolute;
+    left:0px;
+    top:-3px;
+    z-index:2;
+    cursor:pointer;
+}
+
+.BarBeginTime,.BarFinishTime,.TheBar{
+    display:inline-block;
+    vertical-align:middle;
+    padding:0px;
+}
